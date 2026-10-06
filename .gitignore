@@ -1,0 +1,16 @@
+# Audio files (too large for GitHub - host separately)
+audio/
+
+# System files
+.DS_Store
+Thumbs.db
+*.fst
+*.exe
+*.C
+
+# IDE
+.vscode/
+.idea/
+
+# Original logo from Akash_remixed
+logo.png
