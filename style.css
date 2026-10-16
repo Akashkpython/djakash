@@ -265,6 +265,182 @@ img {
   50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
 }
 
+/* ============================================
+   DJ Laser Lights
+   ============================================ */
+.laser-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.laser {
+  position: absolute;
+  top: -5%;
+  width: 2px;
+  height: 120%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 80%
+  );
+  transform-origin: top center;
+  opacity: 0;
+  filter: blur(1px);
+  box-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.laser-1 {
+  left: 30%;
+  animation: laserSweep1 8s ease-in-out infinite;
+}
+
+.laser-2 {
+  left: 50%;
+  animation: laserSweep2 10s ease-in-out infinite 1s;
+}
+
+.laser-3 {
+  left: 70%;
+  animation: laserSweep3 7s ease-in-out infinite 2s;
+}
+
+.laser-4 {
+  left: 20%;
+  width: 1.5px;
+  animation: laserSweep4 9s ease-in-out infinite 3s;
+}
+
+.laser-5 {
+  left: 80%;
+  width: 1.5px;
+  animation: laserSweep5 11s ease-in-out infinite 0.5s;
+}
+
+@keyframes laserSweep1 {
+  0% { transform: rotate(-35deg); opacity: 0; }
+  5% { opacity: 0.7; }
+  25% { transform: rotate(25deg); opacity: 0.5; }
+  50% { transform: rotate(-15deg); opacity: 0.8; }
+  75% { transform: rotate(30deg); opacity: 0.4; }
+  95% { opacity: 0.6; }
+  100% { transform: rotate(-35deg); opacity: 0; }
+}
+
+@keyframes laserSweep2 {
+  0% { transform: rotate(30deg); opacity: 0; }
+  10% { opacity: 0.6; }
+  30% { transform: rotate(-20deg); opacity: 0.7; }
+  60% { transform: rotate(15deg); opacity: 0.5; }
+  90% { opacity: 0.6; }
+  100% { transform: rotate(30deg); opacity: 0; }
+}
+
+@keyframes laserSweep3 {
+  0% { transform: rotate(-25deg); opacity: 0; }
+  8% { opacity: 0.8; }
+  35% { transform: rotate(35deg); opacity: 0.6; }
+  65% { transform: rotate(-10deg); opacity: 0.7; }
+  92% { opacity: 0.5; }
+  100% { transform: rotate(-25deg); opacity: 0; }
+}
+
+@keyframes laserSweep4 {
+  0% { transform: rotate(20deg); opacity: 0; }
+  15% { opacity: 0.5; }
+  40% { transform: rotate(-30deg); opacity: 0.6; }
+  70% { transform: rotate(10deg); opacity: 0.4; }
+  85% { opacity: 0.5; }
+  100% { transform: rotate(20deg); opacity: 0; }
+}
+
+@keyframes laserSweep5 {
+  0% { transform: rotate(-15deg); opacity: 0; }
+  12% { opacity: 0.6; }
+  45% { transform: rotate(25deg); opacity: 0.5; }
+  75% { transform: rotate(-20deg); opacity: 0.7; }
+  88% { opacity: 0.4; }
+  100% { transform: rotate(-15deg); opacity: 0; }
+}
+
+/* ============================================
+   DJ Fog / Smoke Effect
+   ============================================ */
+.fog-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  overflow: hidden;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.fog {
+  position: absolute;
+  bottom: -10%;
+  width: 200%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 20% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 90%, rgba(255, 255, 255, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 85%, rgba(255, 255, 255, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 35% 95%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 65% 75%, rgba(255, 255, 255, 0.04) 0%, transparent 55%);
+  filter: blur(25px);
+  opacity: 0.8;
+}
+
+.fog-1 {
+  animation: fogDrift1 20s ease-in-out infinite;
+}
+
+.fog-2 {
+  bottom: -15%;
+  animation: fogDrift2 25s ease-in-out infinite 5s;
+  opacity: 0.6;
+  filter: blur(35px);
+}
+
+.fog-3 {
+  bottom: -5%;
+  animation: fogDrift3 18s ease-in-out infinite 10s;
+  opacity: 0.5;
+  filter: blur(20px);
+}
+
+@keyframes fogDrift1 {
+  0% { transform: translateX(0%) translateY(0); }
+  25% { transform: translateX(-8%) translateY(-5px); }
+  50% { transform: translateX(-15%) translateY(3px); }
+  75% { transform: translateX(-8%) translateY(-3px); }
+  100% { transform: translateX(0%) translateY(0); }
+}
+
+@keyframes fogDrift2 {
+  0% { transform: translateX(-10%) translateY(0); }
+  30% { transform: translateX(-2%) translateY(-8px); }
+  60% { transform: translateX(-18%) translateY(5px); }
+  100% { transform: translateX(-10%) translateY(0); }
+}
+
+@keyframes fogDrift3 {
+  0% { transform: translateX(-5%) translateY(0); }
+  35% { transform: translateX(-20%) translateY(-4px); }
+  70% { transform: translateX(-10%) translateY(6px); }
+  100% { transform: translateX(-5%) translateY(0); }
+}
+
 .hero-grid {
   position: relative;
   z-index: 2;
