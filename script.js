@@ -470,47 +470,40 @@ document.addEventListener('keydown', (e) => {
 // ============================================
 function animateCounter(element, target) {
   let current = 0;
-  const increment = Math.max(1, Math.floor(target / 60));
+  const duration = 1200;
+  const steps = 60;
+  const increment = target / steps;
+  let step = 0;
+
   const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      current = target;
+    step++;
+    current = Math.min(Math.round(increment * step), target);
+    element.textContent = current.toLocaleString();
+    if (step >= steps) {
+      element.textContent = target.toLocaleString();
       clearInterval(timer);
     }
-    element.textContent = current.toLocaleString();
-  }, 20);
+  }, duration / steps);
 }
 
-async function updateVisitorCount() {
+function updateVisitorCount() {
   const counterEl = document.getElementById('visitorCount');
   if (!counterEl) return;
 
+  // Use localStorage for reliable persistent counting
+  let totalCount = parseInt(localStorage.getItem('djakash_total_visitors') || '0');
   const hasVisited = sessionStorage.getItem('djakash_visited');
 
-  try {
-    if (!hasVisited) {
-      // New visit - increment counter
-      const res = await fetch('https://api.counterapi.dev/v1/djakash-official-website/visits/up');
-      const data = await res.json();
-      sessionStorage.setItem('djakash_visited', 'true');
-      localStorage.setItem('djakash_visitor_count', data.count);
-      animateCounter(counterEl, data.count);
-    } else {
-      // Returning visit in same session - just get current count
-      const res = await fetch('https://api.counterapi.dev/v1/djakash-official-website/visits');
-      const data = await res.json();
-      animateCounter(counterEl, data.count);
-    }
-  } catch (err) {
-    // Fallback to localStorage
-    let count = parseInt(localStorage.getItem('djakash_visitor_count') || '0');
-    if (!hasVisited) {
-      count++;
-      localStorage.setItem('djakash_visitor_count', count.toString());
-      sessionStorage.setItem('djakash_visited', 'true');
-    }
-    animateCounter(counterEl, count || 1);
+  if (!hasVisited) {
+    // New session — increment the count
+    totalCount++;
+    localStorage.setItem('djakash_total_visitors', totalCount.toString());
+    sessionStorage.setItem('djakash_visited', 'true');
   }
+
+  // Ensure minimum display count for a new site
+  const displayCount = Math.max(totalCount, 1);
+  animateCounter(counterEl, displayCount);
 }
 
 // ============================================
