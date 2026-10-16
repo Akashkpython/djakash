@@ -7,36 +7,20 @@
 // Track Data
 // ============================================
 const tracks = [
-  { name: "Aura 10 (Mastered)", file: "audio/aura 10 (mastered).wav", format: "wav", size: "30.4 MB" },
-  { name: "Aura 10 x Thalaivi x Aaya Sher", file: "audio/AURA 10 x THALAIVI x AAYA SHER.wav", format: "wav", size: "60.8 MB" },
   { name: "Aura 10", file: "audio/aura 10.mp3", format: "mp3", size: "7.0 MB" },
-  { name: "Bumba Diga (Anirudh Remix)", file: "audio/bumba diga_Anirudh_Akash.wav", format: "wav", size: "21.0 MB" },
   { name: "Bumba Diga", file: "audio/bumba diga_DJ_AKASH.mp3", format: "mp3", size: "2.4 MB" },
   { name: "College Day", file: "audio/college day.mp3", format: "mp3", size: "6.2 MB" },
-  { name: "Delhi Se Manali", file: "audio/Delhi_se_manali_akash.wav", format: "wav", size: "17.0 MB" },
   { name: "Dhamm Power 56", file: "audio/DHAMM POWER 56.mp3", format: "mp3", size: "9.7 MB" },
   { name: "Dhruvanthar", file: "audio/dhruvanthar.mp3", format: "mp3", size: "2.4 MB" },
   { name: "Disturbia Remix", file: "audio/Disturbia_Remix_Akash.mp3", format: "mp3", size: "3.4 MB" },
-  { name: "Disturbia Remix (WAV)", file: "audio/Disturbia_Remix_Akash.wav", format: "wav", size: "27.8 MB" },
-  { name: "Disturbia Remix Extended", file: "audio/Disturbia_Remix_Akash111.wav", format: "wav", size: "32.5 MB" },
-  { name: "Jasmin", file: "audio/jasmin.wav", format: "wav", size: "49.1 MB" },
-  { name: "Jasmin (Remastered)", file: "audio/jasmin10106.wav", format: "wav", size: "49.1 MB" },
   { name: "Made in Romania x Culik Aku Dong x Idli Dosa", file: "audio/made in romania x culik aku dong x idli dosa.820.mp3", format: "mp3", size: "1.8 MB" },
   { name: "Masth Malaika (Hindi Original)", file: "audio/Masth Malaika From Mark Hindi-320kbps.mp3", format: "mp3", size: "7.4 MB" },
   { name: "Masth Malika DJ Remix", file: "audio/Masth_Malikax Dj Remix Akash.mp3", format: "mp3", size: "4.8 MB" },
   { name: "Masth Malika DJ Remix (Hindi)", file: "audio/Masth_Malikax Dj Remix Hindhi Akash.mp3", format: "mp3", size: "4.8 MB" },
   { name: "Oorum Blood Song", file: "audio/oorum blood song 1.mp3", format: "mp3", size: "9.2 MB" },
-  { name: "Sahiba", file: "audio/sahiba.wav", format: "wav", size: "52.8 MB" },
-  { name: "Sahiba (Version 2)", file: "audio/sahiba10.wav", format: "wav", size: "33.3 MB" },
-  { name: "Sahiba (Version 3)", file: "audio/sahiba5.wav", format: "wav", size: "33.3 MB" },
-  { name: "Sahiba Remix", file: "audio/sahibaremix.wav", format: "wav", size: "33.4 MB" },
   { name: "Sapan", file: "audio/Sapan123.mp3", format: "mp3", size: "3.5 MB" },
-  { name: "Shakira", file: "audio/shakira.wav", format: "wav", size: "50.1 MB" },
-  { name: "Shakira (Akash Mix)", file: "audio/shakira_akash.wav", format: "wav", size: "49.4 MB" },
   { name: "Skyline Echo", file: "audio/Skyline Echo.mp3", format: "mp3", size: "2.4 MB" },
-  { name: "Tiesto vs Aaya Sher (Mastered)", file: "audio/tiesto vs aaya sher (mastered).wav", format: "wav", size: "38.5 MB" },
   { name: "Tulasi Remix", file: "audio/Tulasi Remix Akash.mp3", format: "mp3", size: "3.6 MB" },
-  { name: "Tulasi Funk Remix", file: "audio/Tulasi_Funk_remix.wav", format: "wav", size: "21.0 MB" },
   { name: "Tulasi Remix (Version 2)", file: "audio/Tulasi_Remix_Akash.mp3", format: "mp3", size: "3.7 MB" }
 ];
 

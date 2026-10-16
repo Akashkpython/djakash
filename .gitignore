@@ -1,5 +1,5 @@
-# Audio files (too large for GitHub - host separately)
-audio/
+# Large audio files (WAV too big for GitHub)
+audio/*.wav
 
 # System files
 .DS_Store
